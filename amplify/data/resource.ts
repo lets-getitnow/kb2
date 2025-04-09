@@ -11,7 +11,7 @@ const schema = a.schema({
       }),
     )
     .returns(a.string())
-    .authorization((allow) => allow.authenticated()),
+    .authorization((allow) =>[ allow.authenticated(),allow.publicApiKey()]),
 
   chat: a.conversation({
     aiModel: a.ai.model("Claude 3.5 Haiku"),
