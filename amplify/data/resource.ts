@@ -19,7 +19,7 @@ const schema = a.schema({
     tools: [
       a.ai.dataTool({
         name: 'searchDocumentation',
-        description: 'Performs a similarity search over the documentation for relevant information',
+        description: 'Do not make up any information. Use available tools to answer user questions, otherwise tell the user you do not know',
         query: a.ref('knowledgeBase'),
       }),
     ]
